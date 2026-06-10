@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -35,16 +36,11 @@ nav a:hover {
   color: #9ae6b4;
 }
 
-/* HEADER */
+/* HEADER PHOTO */
 header {
   background: #1f2937;
-  color: white;
-  padding: 25px 20px 20px 20px; /* reduced spacing */
   text-align: center;
-  position: sticky;
-  top: 55px; /* stays below navigation */
-  z-index: 999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 20px 20px 10px 20px;
 }
 
 .profile-photo {
@@ -53,16 +49,35 @@ header {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid white;
-  margin-bottom: 10px; /* reduced spacing below image */
+  margin-bottom: 5px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
-header h1 {
-  margin: 5px 0;
+/* STICKY NAME BAR */
+.sticky-name {
+  position: sticky;
+  top: 52px;
+  z-index: 999;
+
+  background: #1f2937;
+  color: white;
+  text-align: center;
+
+  padding: 6px 20px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-header p {
-  margin: 5px 0 0 0;
+.sticky-name h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.sticky-name p {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
 }
 
 /* SECTIONS */
@@ -130,20 +145,18 @@ footer {
   <a href="#contact">Kontakt</a>
 </nav>
 
-<!-- HEADER -->
+<!-- PHOTO HEADER -->
 
 <header>
-
   <img src="IT.png" alt="Daina Damberga" class="profile-photo">
-
-  <h1>Daina Damberga</h1>
-
-  <p>
-    Umweltplanerin | GIS-Analystin | Physikerin |
-    Naturschutz & Biodiversitätsmanagement
-  </p>
-
 </header>
+
+<!-- STICKY NAME BAR -->
+
+<div class="sticky-name">
+  <h1>Daina Damberga</h1>
+  <p>Umweltplanerin | GIS-Analystin | Physikerin | Naturschutz & Biodiversitätsmanagement</p>
+</div>
 
 <!-- ABOUT -->
 
@@ -313,3 +326,4 @@ footer {
 
 </body>
 </html>
+```

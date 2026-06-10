@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -22,6 +21,7 @@ nav {
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav a {
@@ -39,8 +39,12 @@ nav a:hover {
 header {
   background: #1f2937;
   color: white;
-  padding: 60px 20px;
+  padding: 25px 20px 20px 20px; /* reduced spacing */
   text-align: center;
+  position: sticky;
+  top: 55px; /* stays below navigation */
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .profile-photo {
@@ -49,8 +53,16 @@ header {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid white;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* reduced spacing below image */
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+header h1 {
+  margin: 5px 0;
+}
+
+header p {
+  margin: 5px 0 0 0;
 }
 
 /* SECTIONS */
@@ -164,35 +176,33 @@ footer {
 
   <div class="projects">
 
-```
-<div class="card">
-  <div class="map"></div>
+    <div class="card">
+      <div class="map"></div>
 
-  <h3>Erreichbarkeit urbaner Grünflächen</h3>
+      <h3>Erreichbarkeit urbaner Grünflächen</h3>
 
-  <p><strong>Ziel:</strong> Bewertung der Zugänglichkeit von Grünflächen in städtischen Gebieten.</p>
+      <p><strong>Ziel:</strong> Bewertung der Zugänglichkeit von Grünflächen in städtischen Gebieten.</p>
 
-  <p><strong>Methoden:</strong> Pufferanalyse, Spatial Join</p>
+      <p><strong>Methoden:</strong> Pufferanalyse, Spatial Join</p>
 
-  <p><strong>Werkzeuge:</strong> QGIS</p>
+      <p><strong>Werkzeuge:</strong> QGIS</p>
 
-  <p><strong>Ergebnis:</strong> Identifikation unterversorgter Stadtbereiche.</p>
-</div>
+      <p><strong>Ergebnis:</strong> Identifikation unterversorgter Stadtbereiche.</p>
+    </div>
 
-<div class="card">
-  <div class="map"></div>
+    <div class="card">
+      <div class="map"></div>
 
-  <h3>Hochwasserrisikokartierung</h3>
+      <h3>Hochwasserrisikokartierung</h3>
 
-  <p><strong>Ziel:</strong> Identifikation hochwassergefährdeter Flächen.</p>
+      <p><strong>Ziel:</strong> Identifikation hochwassergefährdeter Flächen.</p>
 
-  <p><strong>Methoden:</strong> DEM-Analyse, Rasterklassifikation</p>
+      <p><strong>Methoden:</strong> DEM-Analyse, Rasterklassifikation</p>
 
-  <p><strong>Werkzeuge:</strong> QGIS, GRASS GIS</p>
+      <p><strong>Werkzeuge:</strong> QGIS, GRASS GIS</p>
 
-  <p><strong>Ergebnis:</strong> Erstellung von Hochwasserrisikozonen.</p>
-</div>
-```
+      <p><strong>Ergebnis:</strong> Erstellung von Hochwasserrisikozonen.</p>
+    </div>
 
   </div>
 
@@ -206,39 +216,37 @@ footer {
 
   <div class="highlight">
 
-```
-<p>
-  Neben meiner beruflichen Tätigkeit bin ich leidenschaftliche
-  Naturschützerin, Hobby-Botanikerin und Gärtnerin.
-  Die Beobachtung und das Verständnis natürlicher Ökosysteme
-  begleiten mich sowohl privat als auch fachlich.
-</p>
+    <p>
+      Neben meiner beruflichen Tätigkeit bin ich leidenschaftliche
+      Naturschützerin, Hobby-Botanikerin und Gärtnerin.
+      Die Beobachtung und das Verständnis natürlicher Ökosysteme
+      begleiten mich sowohl privat als auch fachlich.
+    </p>
 
-<p>
-  Aufgrund meines langjährigen Interesses an heimischer Flora
-  und Biodiversität habe ich mit der Landeshauptstadt Dresden
-  einen persönlichen Pflegevertrag abgeschlossen.
-  Dabei betreue und pflege ich eigenverantwortlich eine Fläche,
-  auf der ausschließlich heimische Pflanzenarten gefördert werden.
-</p>
+    <p>
+      Aufgrund meines langjährigen Interesses an heimischer Flora
+      und Biodiversität habe ich mit der Landeshauptstadt Dresden
+      einen persönlichen Pflegevertrag abgeschlossen.
+      Dabei betreue und pflege ich eigenverantwortlich eine Fläche,
+      auf der ausschließlich heimische Pflanzenarten gefördert werden.
+    </p>
 
-<p>
-  In meiner Freizeit dokumentiere und bestimme ich regelmäßig
-  Pflanzen, Insekten, Vögel und andere Organismen mithilfe der
-  Apps Flora Incognita und iNaturalist.
-  Dadurch erweitere ich kontinuierlich meine Artenkenntnisse
-  und leiste gleichzeitig einen Beitrag zur Erfassung von
-  Biodiversitätsdaten.
-</p>
+    <p>
+      In meiner Freizeit dokumentiere und bestimme ich regelmäßig
+      Pflanzen, Insekten, Vögel und andere Organismen mithilfe der
+      Apps Flora Incognita und iNaturalist.
+      Dadurch erweitere ich kontinuierlich meine Artenkenntnisse
+      und leiste gleichzeitig einen Beitrag zur Erfassung von
+      Biodiversitätsdaten.
+    </p>
 
-<p>
-  Darüber hinaus engagiere ich mich aktiv bei Pflegeeinsätzen
-  von NABU und BUND.
-  Die praktische Mitarbeit ermöglicht es mir,
-  einen direkten Beitrag zum Naturschutz zu leisten
-  und die Wirkung konkreter Maßnahmen unmittelbar zu erleben.
-</p>
-```
+    <p>
+      Darüber hinaus engagiere ich mich aktiv bei Pflegeeinsätzen
+      von NABU und BUND.
+      Die praktische Mitarbeit ermöglicht es mir,
+      einen direkten Beitrag zum Naturschutz zu leisten
+      und die Wirkung konkreter Maßnahmen unmittelbar zu erleben.
+    </p>
 
   </div>
 
@@ -252,12 +260,12 @@ footer {
 
   <p>
     <strong>GIS & Geodaten:</strong>
-    QGIS, GRASS GIS
+    QGIS, PostGIS, Web Mapping
   </p>
 
   <p>
     <strong>Programmierung:</strong>
-    Python, Pandas, GeoPandas
+    Python, MATLAB, SketchUp, PostgreSQL
   </p>
 
   <p>
@@ -300,9 +308,7 @@ footer {
 <!-- FOOTER -->
 
 <footer>
-
   <p>© 2026 Daina Damberga</p>
-
 </footer>
 
 </body>

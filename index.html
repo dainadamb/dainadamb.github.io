@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Daina Damberga | GIS Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daina Damberga | GIS & Umweltplanung Portfolio</title>
 
 <style>
 body {
@@ -10,19 +12,27 @@ body {
   margin: 0;
   background: #f5f5f5;
   color: #333;
+  line-height: 1.6;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 nav {
   background: #1f2937;
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
+
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover {
+  color: #9ae6b4;
 }
 
 /* HEADER */
@@ -33,11 +43,26 @@ header {
   text-align: center;
 }
 
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
 /* SECTIONS */
 section {
   padding: 50px;
   max-width: 1000px;
   margin: auto;
+}
+
+h2 {
+  color: #1f2937;
+  margin-bottom: 25px;
 }
 
 /* PROJECT GRID */
@@ -54,13 +79,20 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* IMAGE PLACEHOLDER */
 .map {
   width: 100%;
   height: 150px;
   background: #ddd;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
@@ -71,82 +103,206 @@ footer {
   color: white;
 }
 </style>
+
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
+  <a href="#about">Über mich</a>
+  <a href="#projects">Projekte</a>
+  <a href="#conservation">Naturschutz</a>
+  <a href="#skills">Kompetenzen</a>
+  <a href="#contact">Kontakt</a>
 </nav>
 
 <!-- HEADER -->
+
 <header>
+
+  <img src="IT.png" alt="Daina Damberga" class="profile-photo">
+
   <h1>Daina Damberga</h1>
-  <p>Umweltplanerin | GIS Analyst | Physikerin</p>
+
+  <p>
+    Umweltplanerin | GIS-Analystin | Physikerin |
+    Naturschutz & Biodiversitätsmanagement
+  </p>
+
 </header>
 
 <!-- ABOUT -->
+
 <section id="about">
-  <h2>About Me</h2>
+
+  <h2>Über mich</h2>
+
   <p>
-    I am a GIS-focused Umweltplanerin with a background in physics.
-    My work focuses on spatial analysis, environmental data processing,
-    and supporting sustainable planning decisions using QGIS and Python.
+    Ich bin Umweltplanerin mit Schwerpunkt Geoinformationssysteme (GIS)
+    und einem akademischen Hintergrund in der Physik.
+    Mein Interesse gilt der Analyse räumlicher Daten,
+    der Umweltbewertung sowie der Entwicklung nachhaltiger und
+    wissenschaftlich fundierter Planungsgrundlagen.
   </p>
+
+  <p>
+    Durch die Kombination von GIS-Methoden, Datenanalyse und
+    naturwissenschaftlichem Denken unterstütze ich die
+    Aufbereitung komplexer Umweltinformationen für Planung,
+    Naturschutz und Entscheidungsprozesse.
+  </p>
+
 </section>
 
 <!-- PROJECTS -->
+
 <section id="projects">
-  <h2>Projects</h2>
+
+  <h2>Projekte</h2>
 
   <div class="projects">
 
-    <div class="card">
-      <div class="map"></div>
-      <h3>Urban Green Space Accessibility</h3>
-      <p><strong>Objective:</strong> Evaluate access to green spaces in urban areas.</p>
-      <p><strong>Methods:</strong> Buffer analysis, spatial join</p>
-      <p><strong>Tools:</strong> QGIS</p>
-      <p><strong>Result:</strong> Identified underserved districts</p>
-    </div>
+```
+<div class="card">
+  <div class="map"></div>
 
-    <div class="card">
-      <div class="map"></div>
-      <h3>Flood Risk Mapping</h3>
-      <p><strong>Objective:</strong> Identify flood-prone areas</p>
-      <p><strong>Methods:</strong> DEM analysis, raster classification</p>
-      <p><strong>Tools:</strong> QGIS, GRASS</p>
-      <p><strong>Result:</strong> Produced flood risk zones</p>
-    </div>
+  <h3>Erreichbarkeit urbaner Grünflächen</h3>
+
+  <p><strong>Ziel:</strong> Bewertung der Zugänglichkeit von Grünflächen in städtischen Gebieten.</p>
+
+  <p><strong>Methoden:</strong> Pufferanalyse, Spatial Join</p>
+
+  <p><strong>Werkzeuge:</strong> QGIS</p>
+
+  <p><strong>Ergebnis:</strong> Identifikation unterversorgter Stadtbereiche.</p>
+</div>
+
+<div class="card">
+  <div class="map"></div>
+
+  <h3>Hochwasserrisikokartierung</h3>
+
+  <p><strong>Ziel:</strong> Identifikation hochwassergefährdeter Flächen.</p>
+
+  <p><strong>Methoden:</strong> DEM-Analyse, Rasterklassifikation</p>
+
+  <p><strong>Werkzeuge:</strong> QGIS, GRASS GIS</p>
+
+  <p><strong>Ergebnis:</strong> Erstellung von Hochwasserrisikozonen.</p>
+</div>
+```
 
   </div>
+
+</section>
+
+<!-- NATURE CONSERVATION -->
+
+<section id="conservation">
+
+  <h2>Naturschutz & Ehrenamtliches Engagement</h2>
+
+  <div class="highlight">
+
+```
+<p>
+  Neben meiner beruflichen Tätigkeit bin ich leidenschaftliche
+  Naturschützerin, Hobby-Botanikerin und Gärtnerin.
+  Die Beobachtung und das Verständnis natürlicher Ökosysteme
+  begleiten mich sowohl privat als auch fachlich.
+</p>
+
+<p>
+  Aufgrund meines langjährigen Interesses an heimischer Flora
+  und Biodiversität habe ich mit der Landeshauptstadt Dresden
+  einen persönlichen Pflegevertrag abgeschlossen.
+  Dabei betreue und pflege ich eigenverantwortlich eine Fläche,
+  auf der ausschließlich heimische Pflanzenarten gefördert werden.
+</p>
+
+<p>
+  In meiner Freizeit dokumentiere und bestimme ich regelmäßig
+  Pflanzen, Insekten, Vögel und andere Organismen mithilfe der
+  Apps Flora Incognita und iNaturalist.
+  Dadurch erweitere ich kontinuierlich meine Artenkenntnisse
+  und leiste gleichzeitig einen Beitrag zur Erfassung von
+  Biodiversitätsdaten.
+</p>
+
+<p>
+  Darüber hinaus engagiere ich mich aktiv bei Pflegeeinsätzen
+  von NABU und BUND.
+  Die praktische Mitarbeit ermöglicht es mir,
+  einen direkten Beitrag zum Naturschutz zu leisten
+  und die Wirkung konkreter Maßnahmen unmittelbar zu erleben.
+</p>
+```
+
+  </div>
+
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
 
-  <p><strong>GIS Tools:</strong> QGIS, GRASS GIS</p>
-  <p><strong>Programming:</strong> Python (GeoPandas, Pandas)</p>
-  <p><strong>Techniques:</strong> Spatial analysis, raster analysis, geoprocessing</p>
-  <p><strong>Cartography:</strong> Thematic mapping</p>
+<section id="skills">
+
+  <h2>Kompetenzen</h2>
+
+  <p>
+    <strong>GIS & Geodaten:</strong>
+    QGIS, GRASS GIS
+  </p>
+
+  <p>
+    <strong>Programmierung:</strong>
+    Python, Pandas, GeoPandas
+  </p>
+
+  <p>
+    <strong>Methoden:</strong>
+    Räumliche Analyse, Geodatenverarbeitung,
+    Rasteranalyse, Geoprozessierung
+  </p>
+
+  <p>
+    <strong>Kartographie:</strong>
+    Thematische Karten und Datenvisualisierung
+  </p>
+
+  <p>
+    <strong>Fachgebiete:</strong>
+    Umweltplanung, Naturschutz,
+    Biodiversität und Landschaftsökologie
+  </p>
 
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: daina.damberga4@gmail.com</p>
-  <p>LinkedIn: (add your link)</p>
+
+  <h2>Kontakt</h2>
+
+  <p>
+    <strong>E-Mail:</strong>
+    daina.damberga4@gmail.com
+  </p>
+
+  <p>
+    <strong>LinkedIn:</strong>
+    https://www.linkedin.com/in/daina-damberga/
+  </p>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
+
   <p>© 2026 Daina Damberga</p>
+
 </footer>
 
 </body>
